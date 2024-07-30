@@ -1,8 +1,15 @@
-# React + Vite
+# Learn English App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Learn English App — это веб-приложение, разработанное для помощи в изучении английского языка. Приложение предоставляет различные инструменты и материалы для эффективного обучения, включая самоучители, словарные карточки, тесты и упражнения.
 
-Currently, two official plugins are available:
+## Особенности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Самоучители**: Начните с основ и постепенно углубляйтесь в изучение английского языка.
+- **Словарные карточки**: Учить и повторять новые слова с помощью интерактивных карточек.
+- **Тесты и упражнения**: Проверьте свои знания с помощью разнообразных тестов и упражнений.
+
+## Технологии
+
+- **React**: JavaScript библиотека для создания пользовательских интерфейсов.
+- **Webpack**: Модульный бандлер для JavaScript-приложений.
+- **Babel**: Компилятор для использования последних возможностей JavaScript.

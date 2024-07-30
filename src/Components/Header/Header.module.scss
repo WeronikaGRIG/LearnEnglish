@@ -1,0 +1,37 @@
+@import '../../styles/var.scss';
+@import '../../styles/reset.scss';
+@import '../../styles/template.scss';
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: $bg-main;
+    color: $text-light-color;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    .title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.4;
+        strong {
+            font-size: 60px;
+            font-weight: 700;
+        }
+        em {
+            font-style: normal;
+            color: $text-span-color;
+        }
+    }
+    .text {
+        font-size: 18px;
+        line-height: 1.333;
+    }
+}
+

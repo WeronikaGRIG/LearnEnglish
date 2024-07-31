@@ -2,3 +2,26 @@
 @import '../../styles/reset.scss';
 @import '../../styles/template.scss';
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-main;
+}
+
+.container{
+    width: $container-width;
+    margin: 0 auto;
+    padding: 40px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 60px;
+        background: white;
+        border: 1px solid $bg-card;
+        border-radius: 40px;
+        overflow: hidden;
+    }
+}

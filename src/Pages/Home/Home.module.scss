@@ -10,8 +10,9 @@ main {
 }
 
 .container {
-    margin: 0 auto;
     width: $container-width;
+    margin: 0 auto;
+    padding-bottom: 40px;
     .content {
         display: flex;
         flex-direction: column;

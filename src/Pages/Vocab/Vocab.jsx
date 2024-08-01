@@ -1,30 +1,21 @@
 import { useState } from 'react';
 import lists from '../../Common/lists.json';
+
 import VocabList from './VocabList';
+import Button from '../../Ui/Button/Button';
+import Progress from '../../Ui/Progress/Progress';
 import style from './Vocab.module.scss';
 
 import arrowBack from '../../assets/icons/arrowBack.svg';
 import addCircle from '../../assets/icons/addCircle.svg';
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
-import sad from '../../assets/icons/sad.svg';
-import happy from '../../assets/icons/happy.svg';
+
+
 
 export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    {/* вынести в отдельный компонент Progress */ }
-    const [sadCount, setSadCount] = useState(0);
-    const [happyCount, setHappyCount] = useState(0);
-
-    const incrementSadCount = () => {
-        setSadCount(sadCount + 1);
-    };
-
-    const incrementHappyCount = () => {
-        setHappyCount(happyCount + 1);
-    };
 
     const handlePrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : lists.length - 1));
@@ -45,31 +36,26 @@ export default function Vocab() {
                     </div>
 
                     <div className={style.vocabs}>
-                        <button
-                            onClick={handlePrev}>
+
+                        <Button
+                            onClick={handlePrev}
+                            title="Previous">
                             <img src={caretBack} alt="Caret Back" />
-                        </button>
+                        </Button>
+
                         <ul className={style.vocab}>
                             <VocabList
                                 key={currentIndex} {...lists[currentIndex]} />
                         </ul>
-                        <button
-                            onClick={handleNext}>
+
+                        <Button
+                            onClick={handleNext}
+                            title="Next">
                             <img src={caretForward} alt="Caret Forward" />
-                        </button>
+                        </Button>
                     </div>
 
-                    {/* вынести в отдельный компонент UI/Progress */}
-                    <div className={style.progress}>
-                        <div className={style.counter} onClick={incrementSadCount}>
-                            <span className={style.tooltip}>{sadCount}</span>
-                            <img src={sad} alt="Sad smile" />
-                        </div>
-                        <div className={style.counter} onClick={incrementHappyCount}>
-                            <span className={style.tooltip}>{happyCount}</span>
-                            <img src={happy} alt="Happy smile" />
-                        </div>
-                    </div>
+                    <Progress />
                 </div>
             </div>
         </main>

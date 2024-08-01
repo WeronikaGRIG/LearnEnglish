@@ -4,25 +4,24 @@ import style from './VocabList.module.scss';
 
 export default function VocabList({ word, transcript, translation }) {
 
-    const [hoverVocab, setHoverVocab] = useState(true);
     const [translationShown, setTranslationShown] = useState(false)
 
     const handleClick = () => {
-        setHoverVocab(!hoverVocab);
-        if (!translationShown) {
-            setTranslationShown(true);
-        }
+        setTranslationShown(!translationShown);
+
     };
 
     return (
         <li className={style.vocab__list}>
             <h3 className={style.vocab__list_word}>{word}</h3>
             <p className={style.vocab__list_transcript}>{transcript}</p>
-            <p className={hoverVocab ? style.vocab__list_translation : style.vocab__check}> {translation} </p>
+            {translationShown && (
+                <p className={style.vocab__list_translation}>{translation}</p>
+            )}
             <button
-                className={style.vocab__list_chek}
+                className={style.vocab__list_check}
                 onClick={handleClick}>
-                Проверить
+                {translationShown ? 'Скрыть' : 'Проверить'}
             </button>
         </li>
     );

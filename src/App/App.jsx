@@ -18,11 +18,12 @@ function App() {
       <div className={style.app}>
         <Nav />
         {/* <Error /> */}
+        {/* <Loader /> */}
         <Vocab />
         {/* <Home /> */}
         <Footer />
 
-        {/* <Loader /> */}
+
       </div>
     </>
   )

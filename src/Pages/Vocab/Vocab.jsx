@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import lists from '../../Common/lists.json';
 
 import VocabList from './VocabList';
@@ -19,22 +19,24 @@ export default function Vocab() {
     const [wordList, setWordList] = useState(lists);
     const [showAddForm, setShowAddForm] = useState(false);
 
-    const handlePrev = () => {
+    const handlePrev = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : wordList.length - 1));
-    };
+    }, [wordList.length]);
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex < wordList.length - 1 ? prevIndex + 1 : 0));
-    };
+    }, [wordList.length]);
 
-    const handleHappyClick = () => {
-        setLearningCards(learnCards + 1);
-    }
+    const handleHappyClick = useCallback(() => {
+        setLearningCards((l) => l + 1);
+    }, []);
 
-    const handleAddWords = (newWord) => {
-        setWordList([...wordList, newWord]);
+    const handleAddWords = useCallback((newWord) => {
+        setWordList((prevWordList) => [...prevWordList, newWord]);
         setShowAddForm(false);
-    }
+    }, []);
+
+    const currentWord = useMemo(() => wordList[currentIndex], [wordList, currentIndex]);
 
     return (
         <main>
@@ -60,19 +62,19 @@ export default function Vocab() {
 
                     <div className={style.vocabs}>
                         <Button
-                            onClick={handlePrev}
-                            title="Previous">
+                            aria-label='Previous'
+                            onClick={handlePrev}>
                             <img src={caretBack} alt="Caret Back" />
                         </Button>
 
                         <ul className={style.vocab}>
                             <VocabList
-                                key={currentIndex} {...wordList[currentIndex]} />
+                                key={currentIndex} {...currentWord} />
                         </ul>
 
                         <Button
-                            onClick={handleNext}
-                            title="Next">
+                            aria-label='Next'
+                            onClick={handleNext}>
                             <img src={caretForward} alt="Caret Forward" />
                         </Button>
                     </div>

@@ -3,16 +3,39 @@
 @import '../../styles/template.scss';
 
 .button {
-    background-color: transparent;
-    border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3rem;
+    padding: 10px 15px;
+    background-color: $bg-button;
+    border: 1px solid $border-button;
+    border-radius: 10px;
+    box-shadow: $shadow-button 0 1px 3px 0;
+    color: $text-light-color;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 250ms;
+    touch-action: manipulation;
+    vertical-align: baseline;
     cursor: pointer;
-    padding: 10px;
-    transition: opacity 0.3s;
-    &:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
+    z-index: 100;
+    &:hover,
+    &:focus{
+        border-color: $border-button;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        color: $text-light-color;
     }
-    &:hover:not(:disabled) {
-        opacity: 0.8;
+    &:hover{
+        transform: translateY(-1px);
     }
+    &:active{
+        background-color: $bg-button-active;
+        border-color: $border-button;
+        box-shadow: $shadow-button 0 2px 4px;
+        color: $text-light-color;
+        transform: translateY(0);
+    }
+    
 }

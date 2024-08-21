@@ -2,7 +2,7 @@
 @import '../../styles/reset.scss';
 @import '../../styles/template.scss';
 
-.modalOverlay {
+.modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -13,48 +13,38 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
+
+    &__content {
+        background: white;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            &__input {
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .error {
+                color: red;
+                font-size: 0.8em;
+            }
+        }
+    }
 }
 
-.modalContent {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
-.closeButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form button {
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.error {
-    color: red;
-    font-size: 0.8em;
-}

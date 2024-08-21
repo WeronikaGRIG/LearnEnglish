@@ -1,7 +1,7 @@
-
+import { Route, Routes } from "react-router-dom";
 
 import Nav from '../Components/Nav/Nav';
-// import Home from '../Pages/Home/Home';
+import Home from '../Pages/Home/Home';
 import Vocab from '../Pages/Vocab/Vocab';
 import Footer from '../Components/Footer/Footer';
 // import Loader from '../Components/Loader/Loader';
@@ -17,13 +17,13 @@ function App() {
     <>
       <div className={style.app}>
         <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/vocabs" element={<Vocab />} />
+        </Routes>
+        <Footer />
         {/* <Error /> */}
         {/* <Loader /> */}
-        <Vocab />
-        {/* <Home /> */}
-        <Footer />
-
-
       </div>
     </>
   )

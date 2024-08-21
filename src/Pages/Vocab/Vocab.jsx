@@ -7,12 +7,11 @@ import FormWord from '../../Ui/Forms/FormWord';
 import Progress from '../../Ui/Progress/Progress';
 import style from './Vocab.module.scss';
 
+// import addCircle from '../../assets/icons/addCircle.svg'
 import arrowBack from '../../assets/icons/arrowBack.svg';
-import addCircle from '../../assets/icons/addCircle.svg';
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
 import Loader from '../../Components/Loader/Loader';
-
 
 export default function Vocab() {
 
@@ -54,12 +53,11 @@ export default function Vocab() {
                         <Button>
                             <img src={arrowBack} alt="Arrow Back" />
                         </Button>
-
                         <h3 className={style.title}>Учить слова</h3>
-
                         <Button
                             onClick={() => setShowAddForm(!showAddForm)}>
-                            <img src={addCircle} alt="Add Circle" />
+                            &#10010;
+                            {/* <img src={addCircle} alt="Add Circle" /> */}
                         </Button>
                     </div>
 

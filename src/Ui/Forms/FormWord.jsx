@@ -85,6 +85,6 @@ export default function FormWord({ addWord, onClose }) {
 }
 
 FormWord.propTypes = {
-    addWord: PropTypes.string.isRequired,
-    onClose: PropTypes.string.isRequired,
+    addWord: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired,
 };

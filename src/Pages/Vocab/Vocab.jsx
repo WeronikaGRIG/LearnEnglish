@@ -1,5 +1,5 @@
 import { useCallback, useState, useMemo } from 'react';
-import lists from '../../Common/lists.json';
+import { useGetWordsQuery, useAddWordMutation } from '../../store/wordsApi';
 
 import VocabList from './VocabList';
 import Button from '../../Ui/Button/Button';
@@ -11,13 +11,17 @@ import arrowBack from '../../assets/icons/arrowBack.svg';
 import addCircle from '../../assets/icons/addCircle.svg';
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
+import Loader from '../../Components/Loader/Loader';
+
 
 export default function Vocab() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnCards, setLearningCards] = useState(0);
-    const [wordList, setWordList] = useState(lists);
     const [showAddForm, setShowAddForm] = useState(false);
+
+    const { data: wordList = [], isLoading } = useGetWordsQuery();
+    const [addWord] = useAddWordMutation();
 
     const handlePrev = useCallback(() => {
         setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : wordList.length - 1));
@@ -28,15 +32,19 @@ export default function Vocab() {
     }, [wordList.length]);
 
     const handleHappyClick = useCallback(() => {
-        setLearningCards((l) => l + 1);
-    }, []);
+        if (learnCards < wordList.length) {
+            setLearningCards((l) => l + 1);
+        }
+    }, [learnCards, wordList.length]);
 
-    const handleAddWords = useCallback((newWord) => {
-        setWordList((prevWordList) => [...prevWordList, newWord]);
+    const handleAddWords = useCallback(async (newWord) => {
+        await addWord(newWord);
         setShowAddForm(false);
-    }, []);
+    }, [addWord]);
 
     const currentWord = useMemo(() => wordList[currentIndex], [wordList, currentIndex]);
+
+    if (isLoading) return <Loader />;
 
     return (
         <main>

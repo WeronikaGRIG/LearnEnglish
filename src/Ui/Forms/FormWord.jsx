@@ -4,17 +4,11 @@ import style from './FormWord.module.scss';
 
 export default function FormWord({ addWord, onClose }) {
     const [word, setWord] = useState('');
-    const [transcript, setTranscript] = useState('');
     const [translation, setTranslation] = useState('');
     const [errors, setErrors] = useState({});
 
     const validateWord = (value) => {
         const regex = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
-        return regex.test(value);
-    };
-
-    const validateTranscript = (value) => {
-        const regex = /^[a-zA-Z[\]/()+']+$/;
         return regex.test(value);
     };
 
@@ -27,7 +21,6 @@ export default function FormWord({ addWord, onClose }) {
         e.preventDefault();
         const newErrors = {};
         if (!validateWord(word)) newErrors.word = 'Invalid word format';
-        if (!validateTranscript(transcript)) newErrors.transcript = 'Invalid transcript format';
         if (!validateTranslation(translation)) newErrors.translation = 'Invalid translation format';
 
         if (Object.keys(newErrors).length > 0) {
@@ -35,9 +28,8 @@ export default function FormWord({ addWord, onClose }) {
             return;
         }
 
-        addWord({ word, transcript, translation });
+        addWord({ word, translation });
         setWord('');
-        setTranscript('');
         setTranslation('');
         setErrors({});
     };
@@ -61,14 +53,6 @@ export default function FormWord({ addWord, onClose }) {
                     />
                     {errors.word && <span className={style.error}>{errors.word}</span>}
 
-                    <input
-                        type="text"
-                        placeholder="Transcript"
-                        value={transcript}
-                        onChange={handleChange(setTranscript)}
-                        required
-                    />
-                    {errors.transcript && <span className={style.error}>{errors.transcript}</span>}
                     <input
                         type="text"
                         placeholder="Translation"

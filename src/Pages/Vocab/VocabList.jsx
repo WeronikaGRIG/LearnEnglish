@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import style from './VocabList.module.scss';
 
-export default function VocabList({ word, transcript, translation }) {
+export default function VocabList({ word, translation }) {
 
     const [translationShown, setTranslationShown] = useState(false)
 
@@ -14,7 +14,6 @@ export default function VocabList({ word, transcript, translation }) {
     return (
         <li className={style.vocab__list}>
             <h3 className={style.vocab__list_word}>{word}</h3>
-            <p className={style.vocab__list_transcript}>{transcript}</p>
             {translationShown && (
                 <p className={style.vocab__list_translation}>{translation}</p>
             )}

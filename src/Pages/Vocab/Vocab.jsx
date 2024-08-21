@@ -18,16 +18,26 @@ export default function Vocab() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [learnCards, setLearningCards] = useState(0);
     const [showAddForm, setShowAddForm] = useState(false);
+    const [animationClass, setAnimationClass] = useState('');
 
     const { data: wordList = [], isLoading } = useGetWordsQuery();
     const [addWord] = useAddWordMutation();
 
     const handlePrev = useCallback(() => {
-        setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : wordList.length - 1));
+        setAnimationClass('slide-right');
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : wordList.length - 1));
+            setAnimationClass('');
+        }, 500);
     }, [wordList.length]);
 
     const handleNext = useCallback(() => {
-        setCurrentIndex((prevIndex) => (prevIndex < wordList.length - 1 ? prevIndex + 1 : 0));
+        setAnimationClass('slide-left');
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex < wordList.length - 1 ? prevIndex + 1 : 0));
+            setAnimationClass('');
+        }, 500);
+
     }, [wordList.length]);
 
     const handleHappyClick = useCallback(() => {
@@ -73,7 +83,7 @@ export default function Vocab() {
                             <img src={caretBack} alt="Caret Back" />
                         </Button>
 
-                        <ul className={style.vocab}>
+                        <ul className={`${style.vocab} ${style[animationClass]}`}>
                             <VocabList
                                 key={currentIndex} {...currentWord} />
                         </ul>

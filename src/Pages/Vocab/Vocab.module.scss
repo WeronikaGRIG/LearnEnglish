@@ -41,7 +41,37 @@ main {
         justify-content: center;
         align-items: center;
         gap: 40px;
+        perspective: 1000px;
     }
+    .vocab{
+        transition: transform .5s;
+        transform-style: preserve-3d;
+        &.slide-left{
+            animation: slideLeft .5s forwards;
+        }
+        &.slide-right{
+            animation: slideRight .5s forwards;
+        }
+    }
+
+    @keyframes slideLeft {
+        0%{
+            transform: translateX(50%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideRight {
+        0%{
+            transform: translateX(-50%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+
     
 }
 

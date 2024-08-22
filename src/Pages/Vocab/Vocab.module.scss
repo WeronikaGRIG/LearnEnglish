@@ -37,6 +37,7 @@ main {
         width: 100%;
     }
     .vocabs{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,34 +45,38 @@ main {
         perspective: 1000px;
     }
     .vocab{
+        position: relative;
         transition: transform .5s;
         transform-style: preserve-3d;
         &.slide-left{
-            animation: slideLeft .5s forwards;
+            animation: slideLeft .8s ease-out;
         }
         &.slide-right{
-            animation: slideRight .5s forwards;
+            animation: slideRight .8s ease-out;
         }
     }
 
     @keyframes slideLeft {
-        0%{
-            transform: translateX(50%);
+        from {
+            transform: scale(0.85) translateX(50%);
+            filter: blur(15px);
         }
-        100%{
-            transform: translateX(0);
+        to{
+            transform: scale(1.1) translateX(-8%);
+            filter: blur(0);
         }
     }
 
     @keyframes slideRight {
-        0%{
-            transform: translateX(-50%);
+        from {
+            transform: scale(0.85) translateX(-50%);
+            filter: blur(15px);
         }
-        100%{
-            transform: translateX(0);
+        to{
+            transform: translateX(8%);
+            filter: blur(0);
         }
     }
-
-    
 }
+
 

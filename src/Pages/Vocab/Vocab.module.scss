@@ -7,34 +7,14 @@ main {
     justify-content: center;
     align-items: center;
     background-color: $bg-main;
-}
 
-.container{
-    width: $container-width;
-    margin: 0 auto;
-    padding: 40px;
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 40px;
-        background: white;
-        border: 1px solid $bg-card;
-        border-radius: 40px;
-        overflow: hidden;
-    }
-    .title{
-        font-size: 32px;
-        font-weight: 700;
-        color: $text-color;
-        text-align: center;
-    }
     .toolbar{
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        top: -45px;
     }
     .vocabs{
         position: relative;
@@ -46,37 +26,18 @@ main {
     }
     .vocab{
         position: relative;
-        transition: transform .5s;
-        transform-style: preserve-3d;
+        width: 100%;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+        opacity: 1;
+        transform: rotateY(0deg);
         &.slide-left{
-            animation: slideLeft .8s ease-out;
+            transform: scale(1.1)rotateY(-15deg);
         }
         &.slide-right{
-            animation: slideRight .8s ease-out;
-        }
-    }
-
-    @keyframes slideLeft {
-        from {
-            transform: scale(0.85) translateX(50%);
-            filter: blur(15px);
-        }
-        to{
-            transform: scale(1.1) translateX(-8%);
-            filter: blur(0);
-        }
-    }
-
-    @keyframes slideRight {
-        from {
-            transform: scale(0.85) translateX(-50%);
-            filter: blur(15px);
-        }
-        to{
-            transform: translateX(8%);
-            filter: blur(0);
+            transform: scale(1.1)rotateY(15deg);
         }
     }
 }
+
 
 

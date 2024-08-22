@@ -4,17 +4,17 @@ import { useGetWordsQuery, useAddWordMutation } from '../../store/wordsApi';
 import { ErrorContext } from '../../contexts/ErrorContext';
 import { LoaderContext } from '../../contexts/LoaderContext';
 
+import Container from '../../Ui/Container/Container';
+import Content from '../../Ui/Content/Content';
 import VocabList from './VocabList';
 import Button from '../../Ui/Button/Button';
 import FormWord from '../../Ui/Forms/FormWord';
 import Progress from '../../Ui/Progress/Progress';
 import style from './Vocab.module.scss';
 
-// import addCircle from '../../assets/icons/addCircle.svg'
 import arrowBack from '../../assets/icons/arrowBack.svg';
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
-// import Loader from '../../Components/Loader/Loader';
 
 export default function Vocab() {
 
@@ -36,7 +36,7 @@ export default function Vocab() {
     }, [isLoading, error, setIsLoading, setError]);
 
     const handlePrev = useCallback(() => {
-        setAnimationClass('slide-right');
+        setAnimationClass('slide-left');
         setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : wordList.length - 1));
             setAnimationClass('');
@@ -44,7 +44,7 @@ export default function Vocab() {
     }, [wordList.length]);
 
     const handleNext = useCallback(() => {
-        setAnimationClass('slide-left');
+        setAnimationClass('slide-right');
         setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex < wordList.length - 1 ? prevIndex + 1 : 0));
             setAnimationClass('');
@@ -70,17 +70,15 @@ export default function Vocab() {
 
     return (
         <main>
-            <div className={style.container}>
-                <div className={style.content}>
+            <Container>
+                <Content title='Учить слова'>
                     <div className={style.toolbar}>
                         <Button>
                             <img src={arrowBack} alt="Arrow Back" />
                         </Button>
-                        <h3 className={style.title}>Учить слова</h3>
                         <Button
                             onClick={() => setShowAddForm(!showAddForm)}>
                             &#10010;
-                            {/* <img src={addCircle} alt="Add Circle" /> */}
                         </Button>
                     </div>
 
@@ -112,8 +110,8 @@ export default function Vocab() {
                         learnCards={learnCards}
                         totalCards={wordList.length}
                         handleHappyClick={handleHappyClick} />
-                </div>
-            </div>
+                </Content>
+            </Container>
         </main>
     );
 }

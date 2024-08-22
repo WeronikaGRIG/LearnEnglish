@@ -9,36 +9,10 @@ main {
     background-color: $bg-main;
 }
 
-.container {
-    width: $container-width;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 60px;
-        background: white;
-        border: 1px solid $bg-card;
-        border-radius: 40px;
-        overflow: hidden;
-        .title{
-            font-size: 32px;
-            font-weight: 700;
-            color: $text-color;
-            text-align: center;
-            z-index: 9;
-        }
-        .list{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            row-gap: 40px;
-            margin: 0 auto;
-            text-align: center;
-        }
-    }
+.cards{
+    display: flex;
+    padding: 40px;
 }
+
 
 

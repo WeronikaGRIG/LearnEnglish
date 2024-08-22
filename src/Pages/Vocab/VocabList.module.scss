@@ -5,11 +5,11 @@
 .vocab__list{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 250px;
     height: 350px;
-    padding: 30px;
+    padding: 40px;
     border: 1px solid $bg-card;
     border-radius: 25px;
     background: #ededed;
@@ -17,35 +17,15 @@
         20px 20px 60px $bg-card,
         -20px -20px 60px #ffffff;
     &_word{
-        font-size: 20px;
+        font-size: 32px;
         font-weight: 700;
         color: $text-color;
         text-align: center;
     }
-    &_transcript{
-        font-size: 16px;
-        font-weight: 500;
-        color: $text-color;
-        text-align: center;
-    }
     &_translation{
-        display: block;
+        font-size: 20px;
         font-weight: 500;
         color: $text-color;
         text-align: center;
-        transition: all 0.4s;
-        transform: rotate(0deg) scale(1);
-    }
-    .vocab__list_chek {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100px;
-        height: 32px;
-        padding: 5px;
-        margin: 50px auto;
-        border-radius: 7px;
-        background-color: $bg-button;
-        color: $text-light-color;
     }
 }

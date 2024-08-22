@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import Button from '../../Ui/Button/Button'
 import style from './VocabList.module.scss';
 
 export default function VocabList({ word, translation }) {
@@ -8,7 +9,6 @@ export default function VocabList({ word, translation }) {
 
     const handleClick = () => {
         setTranslationShown(!translationShown);
-
     };
 
     return (
@@ -17,17 +17,15 @@ export default function VocabList({ word, translation }) {
             {translationShown && (
                 <p className={style.vocab__list_translation}>{translation}</p>
             )}
-            <button
-                className={style.vocab__list_check}
+            <Button
                 onClick={handleClick}>
                 {translationShown ? 'Скрыть' : 'Проверить'}
-            </button>
+            </Button>
         </li>
     );
 }
 
 VocabList.propTypes = {
     word: PropTypes.string.isRequired,
-    transcript: PropTypes.string.isRequired,
     translation: PropTypes.string.isRequired,
 };

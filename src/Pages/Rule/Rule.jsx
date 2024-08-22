@@ -1,19 +1,16 @@
 import Container from '../../Ui/Container/Container';
 import Content from '../../Ui/Content/Content';
-import Header from '../../Components/Header/Header';
-import HomeCard from './HomeCard';
+import RulesCard from './RulesCard';
+import style from './Rule.module.scss';
 
-import style from './Home.module.scss';
-
-export default function Home() {
+export default function Rule() {
     return (
         <>
-            <Header />
             <main>
                 <Container>
-                    <Content title='Выбери технику изучения'>
+                    <Content title='Учить правило'>
                         <div className={style.cards}>
-                            <HomeCard />
+                            <RulesCard />
                         </div>
                     </Content>
                 </Container>

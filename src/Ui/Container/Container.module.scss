@@ -1,0 +1,9 @@
+@import '../../styles/var.scss';
+@import '../../styles/reset.scss';
+@import '../../styles/template.scss';
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+    padding: 30px;
+}

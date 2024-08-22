@@ -1,5 +1,8 @@
-import { useCallback, useState, useMemo } from 'react';
+import { useContext, useCallback, useEffect, useState, useMemo } from 'react';
 import { useGetWordsQuery, useAddWordMutation } from '../../store/wordsApi';
+
+import { ErrorContext } from '../../contexts/ErrorContext';
+import { LoaderContext } from '../../contexts/LoaderContext';
 
 import VocabList from './VocabList';
 import Button from '../../Ui/Button/Button';
@@ -11,7 +14,7 @@ import style from './Vocab.module.scss';
 import arrowBack from '../../assets/icons/arrowBack.svg';
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
-import Loader from '../../Components/Loader/Loader';
+// import Loader from '../../Components/Loader/Loader';
 
 export default function Vocab() {
 
@@ -20,8 +23,17 @@ export default function Vocab() {
     const [showAddForm, setShowAddForm] = useState(false);
     const [animationClass, setAnimationClass] = useState('');
 
-    const { data: wordList = [], isLoading } = useGetWordsQuery();
+    const { setError } = useContext(ErrorContext);
+    const { setIsLoading } = useContext(LoaderContext)
+    const { data: wordList = [], isLoading, error } = useGetWordsQuery();
     const [addWord] = useAddWordMutation();
+
+    useEffect(() => {
+        setIsLoading(isLoading);
+        if (error) {
+            setError(error);
+        }
+    }, [isLoading, error, setIsLoading, setError]);
 
     const handlePrev = useCallback(() => {
         setAnimationClass('slide-right');
@@ -53,7 +65,8 @@ export default function Vocab() {
 
     const currentWord = useMemo(() => wordList[currentIndex], [wordList, currentIndex]);
 
-    if (isLoading) return <Loader />;
+    if (isLoading) return null;
+    if (error) return null;
 
     return (
         <main>

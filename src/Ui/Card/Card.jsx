@@ -11,4 +11,5 @@ export default function Card({ children }) {
 
 Card.propTypes = {
     children: PropTypes.node.isRequired,
+
 }

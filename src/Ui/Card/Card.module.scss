@@ -1,0 +1,19 @@
+@import '../../styles/var.scss';
+@import '../../styles/reset.scss';
+@import '../../styles/template.scss';
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    padding: 40px;
+    border: 1px solid $bg-card;
+    border-radius: 25px;
+    background: #ededed;
+    box-shadow:
+        20px 20px 60px $bg-card,
+        -20px -20px 60px #ffffff;
+}

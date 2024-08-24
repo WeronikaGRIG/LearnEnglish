@@ -5,7 +5,7 @@ import style from './RulesCard.module.scss';
 
 export default function RuleCard() {
     return (
-        <ul className={style.card}>
+        <ul className={style.cards}>
             {dataRules.map((dataRule, i) => {
                 return (
                     <RuleList key={i} {...dataRule} />

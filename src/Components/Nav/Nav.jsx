@@ -6,7 +6,7 @@ import style from './Nav.module.scss';
 const navItems = [
     { label: 'Главная', to: '/' },
     { label: 'Учить слова', to: '/vocabs' },
-    { label: 'Самоучитель', to: '/selfstudy' }
+    { label: 'Самоучитель', to: '/tables' }
 ]
 
 export default function Nav() {

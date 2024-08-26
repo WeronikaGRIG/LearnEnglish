@@ -1,9 +1,9 @@
 
-import dataSimple from '../../../Common/dataSimple.json';
-import style from './Simple.module.scss';
+import dataContinuous from '../../../Common/dataContinuous.json';
+import style from './Continuous.module.scss';
 
-export default function Simple() {
-    const { simple } = dataSimple;
+export default function Continuous() {
+    const { continuous } = dataContinuous;
 
     const renderTextWithStyles = (textArray) => {
         return textArray.map((item, index) => (
@@ -17,8 +17,8 @@ export default function Simple() {
 
     return (
         <>
-            <h2 className={style.title}>Simple Tenses</h2>
-            <p className={style.descr}>Простое времена</p>
+            <h2 className={style.title}>Continuous Tenses</h2>
+            <p className={style.descr}>Настоящие длительные времена</p>
 
             <table className={style.table}>
                 <thead className={style.table__header}>
@@ -30,13 +30,13 @@ export default function Simple() {
                     </tr>
                 </thead>
                 <tbody className={style.table__body}>
-                    {Object.keys(simple).map(time => (
+                    {Object.keys(continuous).map(time => (
                         <tr key={time}
                             className={style.table__body_row}>
                             <td className={style.cellFirst}>{time}</td>
-                            <td className={style.cell}>{renderCell(simple[time].question)}</td>
-                            <td className={style.cell}>{renderCell(simple[time].affirmative)}</td>
-                            <td className={style.cell}>{renderCell(simple[time].negative)}</td>
+                            <td className={style.cell}>{renderCell(continuous[time].question)}</td>
+                            <td className={style.cell}>{renderCell(continuous[time].affirmative)}</td>
+                            <td className={style.cell}>{renderCell(continuous[time].negative)}</td>
                         </tr>
                     ))}
                 </tbody>

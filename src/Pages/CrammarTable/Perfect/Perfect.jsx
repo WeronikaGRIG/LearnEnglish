@@ -1,9 +1,8 @@
+import dataPerfect from '../../../Common/dataPerfect.json';
+import style from './Perfect.module.scss';
 
-import dataSimple from '../../../Common/dataSimple.json';
-import style from './Simple.module.scss';
-
-export default function Simple() {
-    const { simple } = dataSimple;
+export default function Perfect() {
+    const { perfect } = dataPerfect;
 
     const renderTextWithStyles = (textArray) => {
         return textArray.map((item, index) => (
@@ -17,8 +16,8 @@ export default function Simple() {
 
     return (
         <>
-            <h2 className={style.title}>Simple Tenses</h2>
-            <p className={style.descr}>Простое времена</p>
+            <h2 className={style.title}>Perfect Tenses</h2>
+            <p className={style.descr}>Настоящие совершенные времена</p>
 
             <table className={style.table}>
                 <thead className={style.table__header}>
@@ -30,13 +29,13 @@ export default function Simple() {
                     </tr>
                 </thead>
                 <tbody className={style.table__body}>
-                    {Object.keys(simple).map(time => (
+                    {Object.keys(perfect).map(time => (
                         <tr key={time}
                             className={style.table__body_row}>
                             <td className={style.cellFirst}>{time}</td>
-                            <td className={style.cell}>{renderCell(simple[time].question)}</td>
-                            <td className={style.cell}>{renderCell(simple[time].affirmative)}</td>
-                            <td className={style.cell}>{renderCell(simple[time].negative)}</td>
+                            <td className={style.cell}>{renderCell(perfect[time].question)}</td>
+                            <td className={style.cell}>{renderCell(perfect[time].affirmative)}</td>
+                            <td className={style.cell}>{renderCell(perfect[time].negative)}</td>
                         </tr>
                     ))}
                 </tbody>

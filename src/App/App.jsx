@@ -14,8 +14,6 @@ import Error from '../Components/Error/Error';
 import style from './App.module.scss';
 
 
-
-
 function App() {
 
   return (

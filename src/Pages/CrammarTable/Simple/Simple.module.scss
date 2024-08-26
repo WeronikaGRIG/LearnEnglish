@@ -1,0 +1,78 @@
+@import '../../../styles/var.scss';
+@import '../../../styles/reset.scss';
+@import '../../../styles/template.scss';
+
+
+
+.title{
+    font-size: 38px;
+    font-weight: 700;
+    color: $text-color;
+    text-align: center;
+
+}
+.descr{
+    font-size: 24px;
+    font-weight: 500;
+    color: $text-grey-color;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    &__header{
+        background-color: #f2f2f2;
+        &_row{
+            .headerCell{
+                padding: 10px;
+                text-align: center;
+                border: 1px solid #ddd;
+                font-size: 24px;
+                font-weight: 500;
+                color:$text-grey-color;
+                &_first{
+                    @extend .headerCell;
+                    background-color: $bg-main;
+                    color: $text-light-color;
+                }
+            }
+        }
+    }
+    &__body {
+        background-color: #fff;
+
+        &_row {
+            &:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .cellFirst {
+                @extend .cell;
+                background-color: $bg-main;
+                color: $text-light-color;
+                border-bottom: 1px solid $line-color;
+                &:last-child {
+                    border-bottom: 2px solid $bg-main;
+                }
+            }
+            .cell {
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                text-align: center;
+                border: 1px solid #ddd;
+            }
+            .text__span {
+                font-size: 24px;
+                font-weight: 700;
+                color: $text-span-color;
+            }
+            .small__font {
+                font-size: 16px;
+            }
+            
+        }
+    }
+}

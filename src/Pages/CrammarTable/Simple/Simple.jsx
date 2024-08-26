@@ -11,6 +11,10 @@ export default function Simple() {
         ));
     };
 
+    const renderCell = (content) => {
+        return Array.isArray(content) ? renderTextWithStyles(content) : content;
+    };
+
     return (
         <>
             <h2 className={style.title}>Simple Tenses</h2>
@@ -30,9 +34,9 @@ export default function Simple() {
                         <tr key={time}
                             className={style.table__body_row}>
                             <td className={style.cellFirst}>{time}</td>
-                            <td className={style.cell}>{Array.isArray(simple[time].question) ? renderTextWithStyles(simple[time].question) : simple[time].question}</td>
-                            <td className={style.cell}>{Array.isArray(simple[time].affirmative) ? renderTextWithStyles(simple[time].affirmative) : simple[time].affirmative}</td>
-                            <td className={style.cell}>{Array.isArray(simple[time].negative) ? renderTextWithStyles(simple[time].negative) : simple[time].negative}</td>
+                            <td className={style.cell}>{renderCell(simple[time].question)}</td>
+                            <td className={style.cell}>{renderCell(simple[time].affirmative)}</td>
+                            <td className={style.cell}>{renderCell(simple[time].negative)}</td>
                         </tr>
                     ))}
                 </tbody>

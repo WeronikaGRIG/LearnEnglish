@@ -2,8 +2,6 @@
 @import '../../../styles/reset.scss';
 @import '../../../styles/template.scss';
 
-
-
 .title{
     font-size: 38px;
     font-weight: 700;
@@ -43,7 +41,6 @@
     }
     &__body {
         background-color: #fff;
-
         &_row {
             &:nth-child(even) {
                 background-color: #f9f9f9;
@@ -63,16 +60,18 @@
                 font-weight: 400;
                 text-align: center;
                 border: 1px solid #ddd;
+                & span{
+                    font-size: 20px;
+                    font-weight: 500;
+                    color: $text-grey-color;
+                    &:first-child{
+                        color: $text-span-color;
+                    }
+                    &:last-child{
+                        font-size: 16px;
+                    }
+                }
             }
-            .text__span {
-                font-size: 24px;
-                font-weight: 700;
-                color: $text-span-color;
-            }
-            .small__font {
-                font-size: 16px;
-            }
-            
         }
     }
 }

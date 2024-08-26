@@ -4,7 +4,7 @@
             "question": [
                 {
                     "text": "Did",
-                    "className": "text__span"
+                    "className": "text"
                 },
                 {
                     "text": " + V",
@@ -69,7 +69,7 @@
                     "className": "text__normal"
                 },
                 {
-                    "text": "s",
+                    "text": "S",
                     "className": "small__font"
                 }
             ],

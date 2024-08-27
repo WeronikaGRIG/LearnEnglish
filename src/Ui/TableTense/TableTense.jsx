@@ -1,8 +1,6 @@
-import dataPerfect from '../../../Common/dataPerfect.json';
-import style from './Perfect.module.scss';
+import PropTypes from "prop-types";
 
-export default function Perfect() {
-    const { perfect } = dataPerfect;
+export default function TableTense({ title, description, data, style }) {
 
     const renderTextWithStyles = (textArray) => {
         return textArray.map((item, index) => (
@@ -16,8 +14,8 @@ export default function Perfect() {
 
     return (
         <>
-            <h2 className={style.title}>Perfect Tenses</h2>
-            <p className={style.descr}>Настоящие совершенные времена</p>
+            <h2 className={style.title}>{title}</h2>
+            <p className={style.descr}>{description}</p>
 
             <table className={style.table}>
                 <thead className={style.table__header}>
@@ -29,17 +27,24 @@ export default function Perfect() {
                     </tr>
                 </thead>
                 <tbody className={style.table__body}>
-                    {Object.keys(perfect).map(time => (
+                    {Object.keys(data).map(time => (
                         <tr key={time}
                             className={style.table__body_row}>
                             <td className={style.cellFirst}>{time}</td>
-                            <td className={style.cell}>{renderCell(perfect[time].question)}</td>
-                            <td className={style.cell}>{renderCell(perfect[time].affirmative)}</td>
-                            <td className={style.cell}>{renderCell(perfect[time].negative)}</td>
+                            <td className={style.cell}>{renderCell(data[time].question)}</td>
+                            <td className={style.cell}>{renderCell(data[time].affirmative)}</td>
+                            <td className={style.cell}>{renderCell(data[time].negative)}</td>
                         </tr>
                     ))}
                 </tbody>
             </table>
         </>
     );
+}
+
+TableTense.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    data: PropTypes.object.isRequired,
+    style: PropTypes.string.isRequired,
 }

@@ -8,13 +8,12 @@ import Container from '../../Ui/Container/Container';
 import Content from '../../Ui/Content/Content';
 import VocabList from './VocabList';
 import Button from '../../Ui/Button/Button';
+import ButtonBack from '../../Ui/Button/ButtonBack';
 import FormWord from '../../Ui/Forms/FormWord';
 import style from './Vocab.module.scss';
 
 import caretBack from '../../assets/icons/caretBack.svg';
 import caretForward from '../../assets/icons/caretForward.svg';
-import ButtonBack from '../../Ui/Button/ButtonBack';
-
 
 export default function Vocab() {
 

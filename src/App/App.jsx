@@ -10,14 +10,13 @@ import Rule from "../Pages/Rule/Rule";
 import Simple from "../Pages/CrammarTable/Simple";
 import Continuous from '../Pages/CrammarTable/Continuous';
 import Perfect from '../Pages/CrammarTable/Perfect';
+import Quiz from "../Pages/Game/Quiz ";
 
 import Footer from '../Components/Footer/Footer';
 import Loader from '../Components/Loader/Loader';
 import Error from '../Components/Error/Error';
 
 import style from './App.module.scss';
-
-
 
 function App() {
 
@@ -33,6 +32,7 @@ function App() {
             <Route path="/table-simple-tenses" element={<Simple />} />
             <Route path="/table-continuous-tenses" element={<Continuous />} />
             <Route path="/table-perfect-tenses" element={<Perfect />} />
+            <Route path="/selfstudy" element={<Quiz />} />
           </Routes>
           <Footer />
           <Error />

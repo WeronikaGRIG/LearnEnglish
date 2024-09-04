@@ -1,34 +1,34 @@
 [
-    {
-        "word": "afraid",
-        "translation": "напуганный"
-    },
-    {
-        "word": "available",
-        "translation": "доступный"
-    },
-    {
-        "word": "basic",
-        "translation": "базовый"
-    },
-    {
-        "word": "beautiful",
-        "translation": "красивый"
-    },
-    {
-        "word": "brave",
-        "translation": "смелый"
-    },
-    {
-        "word": "careful",
-        "translation": "внимательный"
-    },
-    {
-        "word": "clean",
-        "translation": "чистый"
-    },
-    {
-        "word": "dangerous",
-        "translation": "опасный"
-    }
+  {
+    "word": "afraid",
+    "translation": "напуганный"
+  },
+  {
+    "word": "available",
+    "translation": "доступный"
+  },
+  {
+    "word": "basic",
+    "translation": "базовый"
+  },
+  {
+    "word": "beautiful",
+    "translation": "красивый"
+  },
+  {
+    "word": "brave",
+    "translation": "смелый"
+  },
+  {
+    "word": "careful",
+    "translation": "внимательный"
+  },
+  {
+    "word": "clean",
+    "translation": "чистый"
+  },
+  {
+    "word": "dangerous",
+    "translation": "опасный"
+  }
 ]

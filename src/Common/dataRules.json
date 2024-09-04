@@ -1,20 +1,20 @@
 [
-    {
-        "id": "t1",
-        "title": "Simple Tenses",
-        "description": "Простые времена",
-        "link": "/table-simple-tenses"
-    },
-    {
-        "id": "t2",
-        "title": "Continuous Tenses",
-        "description": "Настоящие длительные времена",
-        "link": "/table-continuous-tenses"
-    },
-    {
-        "id": "t3",
-        "title": "Perfect  Tenses",
-        "description": "Настоящие совершенные времена",
-        "link": "/table-perfect-tenses"
-    }
+  {
+    "id": "t1",
+    "title": "Simple Tenses",
+    "description": "Простые времена",
+    "link": "/table-simple-tenses"
+  },
+  {
+    "id": "t2",
+    "title": "Continuous Tenses",
+    "description": "Настоящие длительные времена",
+    "link": "/table-continuous-tenses"
+  },
+  {
+    "id": "t3",
+    "title": "Perfect  Tenses",
+    "description": "Настоящие совершенные времена",
+    "link": "/table-perfect-tenses"
+  }
 ]

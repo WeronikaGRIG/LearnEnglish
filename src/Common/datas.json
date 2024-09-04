@@ -1,23 +1,23 @@
 [
-    {
-        "id": 1,
-        "img": "src/assets/images/card.png",
-        "title": "Самоучитель",
-        "description": "В этом модуле вы сделаете первые шаги в изучении английского языка ",
-        "link": "/tables"
-    },
-    {
-        "id": 2,
-        "img": "src/assets/images/card.png",
-        "title": "Слова",
-        "description": "В этом модуле вы сможете учить и повторять слова по карточкам ",
-        "link": "/vocabs"
-    },
-    {
-        "id": 3,
-        "img": "src/assets/images/card.png",
-        "title": "Тесты/Упражнения",
-        "description": "Быстрые онлайн-тесты и упражнения для закрепления знаний",
-        "link": "/selfstudy"
-    }
+  {
+    "id": 1,
+    "img": "src/assets/images/card.png",
+    "title": "Самоучитель",
+    "description": "В этом модуле вы сделаете первые шаги в изучении английского языка ",
+    "link": "/tables"
+  },
+  {
+    "id": 2,
+    "img": "src/assets/images/card.png",
+    "title": "Слова",
+    "description": "В этом модуле вы сможете учить и повторять слова по карточкам ",
+    "link": "/vocabs"
+  },
+  {
+    "id": 3,
+    "img": "src/assets/images/card.png",
+    "title": "Тесты/Упражнения",
+    "description": "Быстрые онлайн-тесты и упражнения для закрепления знаний",
+    "link": "/selfstudy"
+  }
 ]

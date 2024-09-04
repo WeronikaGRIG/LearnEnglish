@@ -1,180 +1,180 @@
 {
-    "perfect": {
-        "Past": {
-            "question": [
-                {
-                    "text": "Have/Has",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... have/has",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... have/has not",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ]
+  "perfect": {
+    "Past": {
+      "question": [
+        {
+          "text": "Have/Has",
+          "className": "text__span"
         },
-        "Present": {
-            "question": [
-                {
-                    "text": "Had",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... had",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... had not/hadn't",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ]
+        {
+          "text": " + V",
+          "className": "text__normal"
         },
-        "Future": {
-            "question": [
-                {
-                    "text": "Will have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... will have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... will not have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ]
-        },
-        "Future-in-the-Past": {
-            "question": [
-                {
-                    "text": "Would have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... would have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... would not have",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "3(ed)",
-                    "className": "small__font"
-                }
-            ]
+        {
+          "text": "3(ed)",
+          "className": "small__font"
         }
+      ],
+      "affirmative": [
+        {
+          "text": "... have/has",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "negative": [
+        {
+          "text": "... have/has not",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ]
+    },
+    "Present": {
+      "question": [
+        {
+          "text": "Had",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "affirmative": [
+        {
+          "text": "... had",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "negative": [
+        {
+          "text": "... had not/hadn't",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ]
+    },
+    "Future": {
+      "question": [
+        {
+          "text": "Will have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "affirmative": [
+        {
+          "text": "... will have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "negative": [
+        {
+          "text": "... will not have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ]
+    },
+    "Future-in-the-Past": {
+      "question": [
+        {
+          "text": "Would have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "affirmative": [
+        {
+          "text": "... would have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ],
+      "negative": [
+        {
+          "text": "... would not have",
+          "className": "text__span"
+        },
+        {
+          "text": " + V",
+          "className": "text__normal"
+        },
+        {
+          "text": "3(ed)",
+          "className": "small__font"
+        }
+      ]
     }
+  }
 }

@@ -1,180 +1,180 @@
 {
-    "simple": {
-        "Past": {
-            "question": [
-                {
-                    "text": "Did",
-                    "className": "text"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "did not/didn't",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ]
-        },
-        "Present": {
-            "question": [
-                {
-                    "text": "Do/Does",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                },
-                {
-                    "text": "/V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "S",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "do not/don't doesn't",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ]
-        },
-        "Future": {
-            "question": [
-                {
-                    "text": "Will",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... will",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... will not/won't",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ]
-        },
-        "Future-in-the-Past": {
-            "question": [
-                {
-                    "text": "Would",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "affirmative": [
-                {
-                    "text": "... would",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ],
-            "negative": [
-                {
-                    "text": "... would not/wouldn't",
-                    "className": "text__span"
-                },
-                {
-                    "text": " + V",
-                    "className": "text__normal"
-                },
-                {
-                    "text": "1",
-                    "className": "small__font"
-                }
-            ]
-        }
-    }
+	"simple": {
+		"Past": {
+			"question": [
+				{
+					"text": "Did",
+					"className": "text"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"affirmative": [
+				{
+					"text": "V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"negative": [
+				{
+					"text": "did not/didn't",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			]
+		},
+		"Present": {
+			"question": [
+				{
+					"text": "Do/Does",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"affirmative": [
+				{
+					"text": "V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				},
+				{
+					"text": "/V",
+					"className": "text__normal"
+				},
+				{
+					"text": "S",
+					"className": "small__font"
+				}
+			],
+			"negative": [
+				{
+					"text": "do not/don't doesn't",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			]
+		},
+		"Future": {
+			"question": [
+				{
+					"text": "Will",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"affirmative": [
+				{
+					"text": "... will",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"negative": [
+				{
+					"text": "... will not/won't",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			]
+		},
+		"Future-in-the-Past": {
+			"question": [
+				{
+					"text": "Would",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"affirmative": [
+				{
+					"text": "... would",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			],
+			"negative": [
+				{
+					"text": "... would not/wouldn't",
+					"className": "text__span"
+				},
+				{
+					"text": " + V",
+					"className": "text__normal"
+				},
+				{
+					"text": "1",
+					"className": "small__font"
+				}
+			]
+		}
+	}
 }

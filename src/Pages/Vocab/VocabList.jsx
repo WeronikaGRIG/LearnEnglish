@@ -8,6 +8,7 @@ export default function VocabList({ word, translation }) {
     const [translationShown, setTranslationShown] = useState(false)
 
     const handleClick = () => {
+
         setTranslationShown(!translationShown);
     };
 

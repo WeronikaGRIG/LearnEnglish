@@ -1,16 +1,18 @@
 import Container from '../../Ui/Container/Container';
 import Content from '../../Ui/Content/Content';
+import ButtonBack from '../../Ui/Button/ButtonBack';
 import RulesCard from './RulesCard';
-// import style from './Rule.module.scss';
+
 
 export default function Rule() {
-    return (
-        <main>
-            <Container>
-                <Content title='Учить правило'>
-                    <RulesCard />
-                </Content>
-            </Container>
-        </main>
-    );
+  return (
+    <main>
+      <Container>
+        <Content title='Учить правило'>
+          <ButtonBack />
+          <RulesCard />
+        </Content>
+      </Container>
+    </main>
+  );
 }

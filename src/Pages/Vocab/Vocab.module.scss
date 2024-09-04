@@ -8,13 +8,14 @@ main {
     align-items: center;
     background-color: $bg-main;
 
-    .toolbar{
-        position: relative;
+    .toolbarPlus{
+        position: absolute;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         width: 100%;
-        top: -45px;
+        top: 150px;
+        left: -250px;
     }
     .vocabs{
         position: relative;

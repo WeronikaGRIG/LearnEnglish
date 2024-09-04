@@ -3,13 +3,21 @@ import { useState } from 'react';
 import Button from '../../Ui/Button/Button'
 import style from './VocabList.module.scss';
 
-export default function VocabList({ word, translation }) {
+export default function VocabList({ word, translation, handleLearned }) {
 
     const [translationShown, setTranslationShown] = useState(false)
+    const [learned, setLearned] = useState(false);
 
     const handleClick = () => {
-
-        setTranslationShown(!translationShown);
+        if (!translationShown) {
+            setTranslationShown(true);
+            if (!learned) {
+                handleLearned();
+                setLearned(true);
+            }
+        } else {
+            setTranslationShown(false);
+        }
     };
 
     return (
@@ -29,4 +37,5 @@ export default function VocabList({ word, translation }) {
 VocabList.propTypes = {
     word: PropTypes.string.isRequired,
     translation: PropTypes.string.isRequired,
+    handleLearned: PropTypes.func.isRequired,
 };

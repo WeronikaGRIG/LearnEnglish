@@ -20,6 +20,7 @@ export default function Vocab() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAddForm, setShowAddForm] = useState(false);
   const [animationClass, setAnimationClass] = useState('');
+  const [score, setScore] = useState(0);
 
   const { setError } = useContext(ErrorContext);
   const { setIsLoading } = useContext(LoaderContext)
@@ -55,6 +56,12 @@ export default function Vocab() {
     setShowAddForm(false);
   }, [addWord]);
 
+  const handleLearned = useCallback(() => {
+    if (score < wordList.length) {
+      setScore(score + 1);
+    }
+  }, [score, wordList.length])
+
   const currentWord = useMemo(() => wordList[currentIndex], [wordList, currentIndex]);
 
   if (isLoading) return null;
@@ -64,8 +71,10 @@ export default function Vocab() {
     <main>
       <Container>
         <Content title='Учить слова'>
+
           <ButtonBack />
           <div className={style.toolbarPlus}>
+
             <Button
               onClick={() => setShowAddForm(!showAddForm)}>
               &#10010;
@@ -86,7 +95,7 @@ export default function Vocab() {
 
             <ul className={`${style.vocab} ${style[animationClass]}`}>
               <VocabList
-                key={currentIndex} {...currentWord} />
+                key={currentIndex} {...currentWord} handleLearned={handleLearned} />
             </ul>
 
             <Button
@@ -95,6 +104,9 @@ export default function Vocab() {
               <img src={caretForward} alt="Caret Forward" />
             </Button>
           </div>
+
+          <p className={style.learn}>Выучено слов: {score} / {wordList.length}</p>
+
         </Content>
       </Container>
     </main>

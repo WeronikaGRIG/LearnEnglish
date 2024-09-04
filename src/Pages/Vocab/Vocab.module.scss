@@ -23,21 +23,26 @@ main {
         justify-content: center;
         align-items: center;
         gap: 40px;
+        margin-bottom: 30px;
         perspective: 1000px;
+        .vocab{
+          position: relative;
+          width: 100%;
+          transition: transform 0.5s ease, opacity 0.5s ease;
+          opacity: 1;
+          transform: rotateY(0deg);
+          &.slide-left{
+              transform: scale(1.1)rotateY(-15deg);
+          }
+          &.slide-right{
+              transform: scale(1.1)rotateY(15deg);
+          }
+      }
     }
-    .vocab{
-        position: relative;
-        width: 100%;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        opacity: 1;
-        transform: rotateY(0deg);
-        &.slide-left{
-            transform: scale(1.1)rotateY(-15deg);
-        }
-        &.slide-right{
-            transform: scale(1.1)rotateY(15deg);
-        }
+    .learn{
+      z-index: 1;
     }
+    
 }
 
 
